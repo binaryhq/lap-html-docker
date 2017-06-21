@@ -13,7 +13,7 @@ RUN a2enmod rewrite
 # Add image configuration and scripts
 ADD uploads/start-apache2.sh /start-apache2.sh
 ADD uploads/run.sh /run.sh
-ADD uploads/create_mysql_users.sh /create_mysql_users.sh
+ADD uploads/create_filemanager_users.sh /create_filemanager_users.sh
 RUN chmod 755 /*.sh
 ADD uploads/supervisord-apache2.conf /etc/supervisor/conf.d/supervisord-apache2.conf
 ADD uploads/apache_default /etc/apache2/sites-available/000-default.conf
