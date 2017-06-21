@@ -5,8 +5,7 @@ MAINTAINER Ningappa <ningappa.kamate787@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \
   apt-get -y install supervisor apache2 libapache2-mod-php5  php-apc php5-mcrypt zip unzip  && \
-  echo "ServerName localhost" >> /etc/apache2/apache2.conf && rm /var/www/html/index.html
-
+  echo "ServerName localhost" >> /etc/apache2/apache2.conf
 RUN php5enmod mcrypt
 RUN a2enmod rewrite
 
